@@ -123,6 +123,7 @@ class TblUserController extends Controller
 	public function actionIndex()
 	{
 		$dataProvider=new CActiveDataProvider('TblUser');
+		//$postPerPage=Yii::app()->controller->module->postPerPage;
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

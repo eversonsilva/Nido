@@ -20,4 +20,18 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+
+	function run($actionID)
+    {
+
+        if(strpos('[filme/login][filme/error]', '['.$this->id.'/'.$actionID.']') === false)
+        {
+            if(Yii::app()->user->isGuest){
+
+                $this->redirect(array("filme/login"));
+            }
+
+		}
+		parent::run($actionID);
+    }
 }

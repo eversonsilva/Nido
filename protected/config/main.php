@@ -7,10 +7,12 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Filmes',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
+
+	'defaultController'=>'filme',
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -20,6 +22,9 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
+		'forum' => array(
+			'postPerPage' =>20,
+		),
 		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
@@ -67,8 +72,8 @@ return array(
 		//'db'=>require(dirname(__FILE__).'/database.php'),
 
 		'errorHandler'=>array(
-			// use 'site/error' action to display errors
-			'errorAction'=>YII_DEBUG ? null : 'site/error',
+			// use 'filme/error' action to display errors
+			'errorAction'=>YII_DEBUG ? null : 'filme/error',
 		),
 
 		'log'=>array(
