@@ -6,10 +6,12 @@ $this->breadcrumbs=array(
 	'Tbl Users',
 );
 
-$this->menu=array(
-	array('label'=>'Create TblUser', 'url'=>array('create')),
-	array('label'=>'Manage TblUser', 'url'=>array('admin')),
-);
+if(Yii::app()->user->isAdm()){
+	$this->menu=array(
+		array('label'=>'Create TblUser', 'url'=>array('create')),
+		array('label'=>'Manage TblUser', 'url'=>array('admin')),
+	);
+}
 ?>
 
 <h1>Tbl Users</h1>

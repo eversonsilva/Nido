@@ -2,6 +2,7 @@
 /* @var $this FilmeController */
 /* @var $model Filme */
 
+
 $this->breadcrumbs=array(
 	'Filmes'=>array('index'),
 	'Manage',

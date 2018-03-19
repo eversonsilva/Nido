@@ -29,9 +29,9 @@
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-				array('label'=>'Usuarios' , 'url'=>array('/tblUser/index'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Filmes' , 'url'=>array('/filme/index'), 'visible'=>!Yii::app()->user->isGuest),
-				array('label'=>'Login', 'url'=>array('/filme/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Usuarios' , 'url'=>array('/tblUser/index'), 'visible'=>Yii::app()->user->isAdm()),
+				array('label'=>'Filmes' , 'url'=>array('/filme/index'), 'visible'=>Yii::app()->user->isAdm()),
+				array('label'=>'Login', 'url'=>array('/filme/login'),'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/filme/logout'), 'visible'=>!Yii::app()->user->isGuest)			
 			),
 		)); ?>
